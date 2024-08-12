@@ -9,7 +9,7 @@ Rediseño de Spotify utilizando Flutter. Este proyecto tiene como objetivo recre
 
 ## Descripción del Proyecto
 
-Este es un proyecto de ejemplo para desarrollar una aplicación Flutter que imita la apariencia de la aplicación de Spotify. Está diseñado para ser una base sólida sobre la que puedes construir y personalizar características adicionales.
+Este es un proyecto de ejemplo para desarrollar una aplicación Flutter que imita la apariencia de la aplicación de Spotify con un nuevo y renovado diseño.
 
 ## Tecnologías Usadas
 
