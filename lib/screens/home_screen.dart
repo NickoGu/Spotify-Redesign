@@ -115,8 +115,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 32),
-          child: _pages[
-              _selectedIndex], // Mostrar el widget correspondiente al índice seleccionado
+          child: _pages[_selectedIndex],
         ),
       ),
     );

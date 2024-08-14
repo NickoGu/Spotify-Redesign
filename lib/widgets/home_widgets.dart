@@ -1,4 +1,6 @@
+import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 
 class TodaysHitsWidget extends StatelessWidget {
   const TodaysHitsWidget({
@@ -105,7 +107,6 @@ class HomeWidget extends StatelessWidget {
   const HomeWidget({
     super.key,
   });
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -116,20 +117,131 @@ class HomeWidget extends StatelessWidget {
         const SizedBox(height: 32),
         const TodaysHitsWidget(),
         SizedBox(
-          height: MediaQuery.sizeOf(context).height / 10,
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: 5,
-            itemBuilder: (BuildContext context, int index) {
-              return const Padding(
-                padding: EdgeInsets.only(right: 48.0),
-                child: Text("Artists", style: TextStyle(fontSize: 18)),
-              );
-            },
+          height: MediaQuery.sizeOf(context).height / 1.8,
+          child: ContainedTabBarView(
+            tabs: const [
+              Text('Artists'),
+              Text('Albums'),
+              Text('Podcasts'),
+              Text('Genres'),
+            ],
+            views: [
+              const ArtistsWidget(),
+              const AlbumsWidget(),
+              const PodcastsWidget(),
+              SizedBox(
+                  width: double.infinity,
+                  child: ListView.builder(
+                      itemCount: 10,
+                      itemBuilder: (context, snapshot) {
+                        return ListTile(
+                          title: const Text('Rock Nacional'),
+                          subtitle: const Text('123165 monthly listeners'),
+                          trailing: IconButton(
+                            icon: const Icon(Icons.chevron_right),
+                            onPressed: () {},
+                          ),
+                        );
+                      })),
+            ],
+            onChange: (index) => print(index),
           ),
         ),
         const SizedBox(height: 32),
       ],
     );
+  }
+}
+
+class PodcastsWidget extends StatelessWidget {
+  const PodcastsWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+        width: double.infinity,
+        child: GridView.builder(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2, mainAxisSpacing: 8),
+          itemCount: 10,
+          itemBuilder: (context, index) {
+            return Column(
+              children: [
+                Container(
+                  width: 120,
+                  height: 120,
+                  decoration: BoxDecoration(
+                    color: Colors.grey,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Text('Podcast: $index'),
+              ],
+            );
+          },
+        ));
+  }
+}
+
+class AlbumsWidget extends StatelessWidget {
+  const AlbumsWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+        width: double.infinity,
+        child: GridView.builder(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2, mainAxisSpacing: 8),
+          itemCount: 10,
+          itemBuilder: (context, index) {
+            return Column(
+              children: [
+                Container(
+                  width: 120,
+                  height: 120,
+                  decoration: BoxDecoration(
+                    color: Colors.grey,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Text('Album: $index'),
+              ],
+            );
+          },
+        ));
+  }
+}
+
+class ArtistsWidget extends StatelessWidget {
+  const ArtistsWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+        itemCount: 10,
+        itemBuilder: (context, snapshot) {
+          return SizedBox(
+              width: double.infinity,
+              child: ListTile(
+                leading: const CircleAvatar(),
+                title:
+                    const Text('Charly García', style: TextStyle(fontSize: 16)),
+                subtitle: const Text('2.6M monthly listeners',
+                    style: TextStyle(fontSize: 10)),
+                trailing: IconButton(
+                  icon: const Icon(Icons.chevron_right),
+                  onPressed: () {},
+                ),
+              ));
+        });
   }
 }
