@@ -1,16 +1,17 @@
-# spotify_redesign
+# Spotify Redesign
 
-A new Flutter project.
+Rediseño de Spotify utilizando Flutter. Este proyecto tiene como objetivo recrear la experiencia visual y funcional de la aplicación de Spotify con un diseño moderno y estilizado.
 
-## Getting Started
+## Índice
 
-This project is a starting point for a Flutter application.
+- [Descripción del Proyecto](#descripción-del-proyecto)
+- [Tecnologías Usadas](#tecnologías-usadas)
 
-A few resources to get you started if this is your first Flutter project:
+## Descripción del Proyecto
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Este es un proyecto de ejemplo para desarrollar una aplicación Flutter que imita la apariencia de la aplicación de Spotify con un nuevo y renovado diseño.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Tecnologías Usadas
+
+- **Flutter**: Framework de UI para crear aplicaciones nativas compiladas para dispositivos móviles, web y escritorio desde una única base de código.
+- **Dart**: Lenguaje de programación optimizado para aplicaciones móviles que se utiliza en Flutter.
