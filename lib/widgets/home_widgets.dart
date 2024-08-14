@@ -95,9 +95,33 @@ class PlaylistWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
-        Text("Playlist", style: TextStyle(fontSize: 24)),
+        SizedBox(
+          height: MediaQuery.sizeOf(context).height - 150,
+          width: double.infinity,
+          child: GridView.builder(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2, mainAxisSpacing: 8),
+            itemCount: 10,
+            itemBuilder: (context, index) {
+              return Column(
+                children: [
+                  Container(
+                    width: 120,
+                    height: 120,
+                    decoration: BoxDecoration(
+                      color: Colors.grey,
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  Text('Playlist: $index'),
+                ],
+              );
+            },
+          ),
+        )
       ],
     );
   }
