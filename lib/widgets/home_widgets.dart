@@ -65,10 +65,120 @@ class ProfileWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        Text("Profile", style: TextStyle(fontSize: 24)),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(64),
+            child: SizedBox(
+              width: double.infinity,
+              //color: const Color(0xFF333333),
+              height: MediaQuery.sizeOf(context).height / 2.5,
+              child: const Column(
+                children: [
+                  SizedBox(height: 8),
+                  CircleAvatar(
+                    radius: 40,
+                  ),
+                  SizedBox(height: 8),
+                  Text("User Name", style: TextStyle(fontSize: 18)),
+                  Text("email@email.com",
+                      style:
+                          TextStyle(fontSize: 12, fontWeight: FontWeight.w200)),
+                  SizedBox(height: 16),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Column(
+                        children: [
+                          Text("Followers",
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.w400)),
+                          Text("1.2M", style: TextStyle(fontSize: 20))
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Text("Following",
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.w400)),
+                          Text("1.2M", style: TextStyle(fontSize: 20))
+                        ],
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Column(
+                children: [
+                  IconButton(
+                    icon: const Icon(Iconsax.user_add),
+                    onPressed: () {},
+                  ),
+                  const Text("Find a friend")
+                ],
+              ),
+              Column(
+                children: [
+                  IconButton(
+                    icon: const Icon(Iconsax.send_14),
+                    onPressed: () {},
+                  ),
+                  const Text("Share")
+                ],
+              ),
+            ],
+          ),
+          const SizedBox(height: 24),
+          const Divider(),
+          const SizedBox(height: 24),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text("Most Played", style: TextStyle(fontSize: 24)),
+              const SizedBox(
+                height: 16,
+              ),
+              SizedBox(
+                height: 200,
+                width: double.infinity,
+                child: ListView.builder(
+                  itemCount: 10,
+                  itemBuilder: (context, index) {
+                    return SizedBox(
+                      width: double.maxFinite,
+                      child: ListTile(
+                        title: const Text("Song Name",
+                            style: TextStyle(fontSize: 16)),
+                        subtitle: const Text("Artist Name",
+                            style: TextStyle(
+                                fontSize: 12, fontWeight: FontWeight.w200)),
+                        leading: ClipRRect(
+                          borderRadius: BorderRadius.circular(12),
+                          child: Container(
+                            width: 56,
+                            color: Colors.grey,
+                          ),
+                        ),
+                        trailing: IconButton(
+                          icon: const Icon(Iconsax.menu_14),
+                          onPressed: () {},
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              )
+            ],
+          )
+        ],
+      ),
     );
   }
 }
