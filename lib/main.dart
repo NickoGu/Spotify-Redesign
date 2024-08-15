@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spotify_redesign/bloc/theme_cubit.dart';
 import 'package:spotify_redesign/screens/home_screen.dart';
 import 'package:spotify_redesign/screens/presentation_screen.dart';
+import 'package:spotify_redesign/screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
           title: 'Flutter Demo',
           debugShowCheckedModeBanner: false,
           theme: state,
-          home: const PresentationScreen(),
+          home: const SplashScreen(),
         );
       }),
     );
