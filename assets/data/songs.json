@@ -1,0 +1,107 @@
+[
+    {
+        "name": "De Música Ligera",
+        "artist": "Soda Stereo",
+        "image": "https://i.scdn.co/image/ab67616d0000b2731bbe81fc1e928f05149e49ab"
+    },
+    {
+        "name": "Persiana Americana",
+        "artist": "Soda Stereo",
+        "image": "https://i.scdn.co/image/ab67616d0000b2731bbe81fc1e928f05149e49ab"
+    },
+    {
+        "name": "Trátame Suavemente",
+        "artist": "Soda Stereo",
+        "image": "https://i.scdn.co/image/ab67616d0000b2731bbe81fc1e928f05149e49ab"
+    },
+    {
+        "name": "Cuando Pase el Temblor",
+        "artist": "Soda Stereo",
+        "image": "https://i.scdn.co/image/ab67616d0000b2731bbe81fc1e928f05149e49ab"
+    },
+    {
+        "name": "Loco (Tu Forma de Ser)",
+        "artist": "Los Auténticos Decadentes",
+        "image": "https://i.scdn.co/image/ab67616d0000b27362d6b9c62691db6f63608eac"
+    },
+    {
+        "name": "11 y 6",
+        "artist": "Fito Páez",
+        "image": "https://i.scdn.co/image/ab67616d0000b273921417baf700cc9da1d43b80"
+    },
+    {
+        "name": "El Amor Después del Amor",
+        "artist": "Fito Páez",
+        "image": "https://i.scdn.co/image/ab67616d0000b273b80f37385bd537d17f9be93a"
+    },
+    {
+        "name": "Sábado",
+        "artist": "Divididos",
+        "image": "https://i.scdn.co/image/ab67616d0000b273abbe0ef276b8fd385d709aa7"
+    },
+    {
+        "name": "Deja Vu",
+        "artist": "Gustavo Cerati",
+        "image": "https://i.scdn.co/image/ab67616d0000b27314653b83cd7d851accdb5142"
+    },
+    {
+        "name": "Mil Horas",
+        "artist": "Los Abuelos de la Nada",
+        "image": "https://i.scdn.co/image/ab67616d0000b273ac8e4606429b148f6d2ba11d"
+    },
+    {
+        "name": "Tira para Arriba",
+        "artist": "Miguel Mateos",
+        "image": "https://i.scdn.co/image/ab67616d0000b273996da394020f1d1ec6cb7ece"
+    },
+    {
+        "name": "Héroe del Whisky",
+        "artist": "Patricio Rey y sus Redonditos de Ricota",
+        "image": "https://i.scdn.co/image/ab67616d0000b273eb35b5a4084fb41414b60d5b"
+    },
+    {
+        "name": "El final es en donde partí",
+        "artist": "La Renga",
+        "image": "https://i.scdn.co/image/ab67616d0000b27368db2fb5a6164dbbd89083d9"
+    },
+    {
+        "name": "Seguir Viviendo Sin Tu Amor",
+        "artist": "Luis Alberto Spinetta",
+        "image": "https://i.scdn.co/image/ab67616d0000b273217ce66ac32c161c7516228c"
+    },
+    {
+        "name": "Por mil noches",
+        "artist": "Airbag",
+        "image": "https://i.scdn.co/image/ab67616d0000b27398f2e41c3e293608d75b5191"
+    },
+    {
+        "name": "Té para Tres",
+        "artist": "Soda Stereo",
+        "image": "https://i.scdn.co/image/ab67616d0000b273e885d6895a32a612813bf6d3"
+    },
+    {
+        "name": "Pupilas Lejanas",
+        "artist": "Los Pericos",
+        "image": "https://i.scdn.co/image/ab67616d0000b273544db3cf4833b199f258c9e1"
+    },
+    {
+        "name": "Spaguetti del Rock",
+        "artist": "Divididos",
+        "image": "https://i.scdn.co/image/ab67616d0000b2738875cc2685c8d483e0e667f0"
+    },
+    {
+        "name": "Mi perro dinamita",
+        "artist": "Los Redondos",
+        "image": "https://i.scdn.co/image/ab67616d0000b2736b26c788ddc971ca6176a650"
+    },
+    {
+        "name": "Rock del gato",
+        "artist": "Los Ratones Paranoicos",
+        "image": "https://i.scdn.co/image/ab67616d0000b2737d032e1ed6d0bc6ed155cc27"
+    },
+    {
+        "name": "Lamento Boliviano",
+        "artist": "Los Enanitos Verdes",
+        "image": "https://i.scdn.co/image/ab67616d0000b27335bf8a2179962114b8ec7585"
+    }
+]

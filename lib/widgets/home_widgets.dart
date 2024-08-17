@@ -1,62 +1,7 @@
 import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-
-class TodaysHitsWidget extends StatelessWidget {
-  const TodaysHitsWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height / 2.7,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Text("Today's Hits",
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-          const SizedBox(height: 4),
-          SizedBox(
-            height: 164,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: 10,
-              itemBuilder: (BuildContext context, int index) {
-                return Padding(
-                  padding: const EdgeInsets.only(right: 16.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(12),
-                        child: Container(
-                          width: 124,
-                          height: 124,
-                          color: Colors.grey,
-                        ),
-                      ),
-                      const Text(
-                        "Texturas",
-                        style: TextStyle(
-                            fontSize: 14, fontWeight: FontWeight.bold),
-                      ),
-                      const Text(
-                        "Soda Stereo",
-                        style: TextStyle(fontSize: 12),
-                      ),
-                    ],
-                  ),
-                );
-              },
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
+import 'package:spotify_redesign/models/songs_model.dart';
 
 class ProfileWidget extends StatelessWidget {
   const ProfileWidget({
@@ -238,9 +183,13 @@ class PlaylistWidget extends StatelessWidget {
 }
 
 class HomeWidget extends StatelessWidget {
-  const HomeWidget({
+  HomeWidget({
     super.key,
+    required this.songs,
   });
+
+  Future<List<Songs>> songs;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -249,7 +198,70 @@ class HomeWidget extends StatelessWidget {
           'assets/banner.png',
         ),
         const SizedBox(height: 32),
-        const TodaysHitsWidget(),
+        SizedBox(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text("Today's Hits",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+              const SizedBox(height: 4),
+              SizedBox(
+                height: 200,
+                child: FutureBuilder<List<Songs>>(
+                  future: songs,
+                  builder: (context, snapshot) {
+                    if (snapshot.hasData) {
+                      return ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: snapshot.data!.length,
+                        itemBuilder: (context, index) {
+                          return Padding(
+                            padding: const EdgeInsets.only(right: 12.0),
+                            child: SizedBox(
+                              width: 120,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(12),
+                                    child: SizedBox(
+                                      width: 120,
+                                      height: 120,
+                                      child: Image.network(
+                                          snapshot.data![index].image),
+                                    ),
+                                  ),
+                                  const SizedBox(height: 8),
+                                  Text(
+                                    snapshot.data![index].name,
+                                    style: const TextStyle(fontSize: 14),
+                                    maxLines: 2,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                  Text(
+                                    snapshot.data![index].artist,
+                                    style: const TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w200),
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                ],
+                              ),
+                            ),
+                          );
+                        },
+                      );
+                    } else if (snapshot.hasError) {
+                      return Text('${snapshot.error}');
+                    }
+                    return const CircularProgressIndicator();
+                  },
+                ),
+              )
+            ],
+          ),
+        ),
         SizedBox(
           height: MediaQuery.sizeOf(context).height / 1.8,
           child: ContainedTabBarView(

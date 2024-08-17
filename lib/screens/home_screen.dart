@@ -1,5 +1,9 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:spotify_redesign/models/songs_model.dart';
 import 'package:spotify_redesign/widgets/home_widgets.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -12,8 +16,22 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
 
-  final List<Widget> _pages = [
-    const HomeWidget(),
+  late Future<List<Songs>> songs;
+  Future<List<Songs>> loadSongs() async {
+    final String response =
+        await rootBundle.loadString('assets/data/songs.json');
+    final List<dynamic> data = json.decode(response);
+    return data.map((json) => Songs.fromJson(json)).toList();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    songs = loadSongs();
+  }
+
+  late final List<Widget> _pages = [
+    HomeWidget(songs: songs),
     const PlaylistWidget(),
     const HistoryWidget(),
     const ProfileWidget(),

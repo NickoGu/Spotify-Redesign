@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:spotify_redesign/bloc/theme_cubit.dart';
-import 'package:spotify_redesign/screens/home_screen.dart';
-import 'package:spotify_redesign/screens/presentation_screen.dart';
 import 'package:spotify_redesign/screens/splash_screen.dart';
 
 void main() {
@@ -21,6 +19,9 @@ class MyApp extends StatelessWidget {
           title: 'Flutter Demo',
           debugShowCheckedModeBanner: false,
           theme: state,
+          themeMode: state.brightness == Brightness.dark
+              ? ThemeMode.dark
+              : ThemeMode.light,
           home: const SplashScreen(),
         );
       }),
