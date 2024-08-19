@@ -54,20 +54,20 @@ class CustomBorderButton extends StatelessWidget {
         ),
       ),
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.max,
         children: [
           leading,
           const SizedBox(width: 8),
-          Text(
-            text,
-            style: const TextStyle(
-              fontSize: 16,
-              color: Colors.white,
-              fontWeight: FontWeight.w400,
-              overflow: TextOverflow.ellipsis,
+          Flexible(
+            child: Text(
+              text,
+              style: const TextStyle(
+                  fontSize: 14,
+                  color: Colors.white,
+                  overflow: TextOverflow.ellipsis),
+              maxLines: 1,
             ),
-            maxLines: 1,
           ),
         ],
       ),
