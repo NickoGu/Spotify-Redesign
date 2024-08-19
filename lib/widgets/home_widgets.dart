@@ -144,9 +144,12 @@ class HistoryWidget extends StatelessWidget {
 }
 
 class PlaylistWidget extends StatelessWidget {
-  const PlaylistWidget({
+  PlaylistWidget({
     super.key,
+    required this.songs,
   });
+
+  Future<List<Songs>> songs;
 
   @override
   Widget build(BuildContext context) {
@@ -155,27 +158,60 @@ class PlaylistWidget extends StatelessWidget {
         SizedBox(
           height: MediaQuery.sizeOf(context).height - 150,
           width: double.infinity,
-          child: GridView.builder(
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2, mainAxisSpacing: 8),
-            itemCount: 10,
-            itemBuilder: (context, index) {
-              return Column(
-                children: [
-                  Container(
-                    width: 120,
-                    height: 120,
-                    decoration: BoxDecoration(
-                      color: Colors.grey,
-                      borderRadius: BorderRadius.circular(12),
+          child: FutureBuilder(
+              future: songs,
+              builder: (context, snapshot) {
+                if (snapshot.hasData) {
+                  List<Songs> uniqueArtists = [];
+                  for (var song in snapshot.data!) {
+                    if (!uniqueArtists
+                        .any((element) => element.artist == song.artist)) {
+                      uniqueArtists.add(song);
+                    }
+                  }
+
+                  return GridView.builder(
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      mainAxisExtent: 170,
+                      mainAxisSpacing: 16,
                     ),
-                  ),
-                  const SizedBox(height: 8),
-                  Text('Playlist: $index'),
-                ],
-              );
-            },
-          ),
+                    itemCount: uniqueArtists.length,
+                    itemBuilder: (context, index) {
+                      return Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                        child: Column(
+                          children: [
+                            Container(
+                              width: 120,
+                              height: 120,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: NetworkImage(
+                                        uniqueArtists[index].thisIsImage),
+                                    fit: BoxFit.cover),
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                            ),
+                            const SizedBox(height: 16),
+                            Text(
+                              'This is ${uniqueArtists[index].artist}',
+                              textAlign: TextAlign.center,
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 2,
+                              style: const TextStyle(fontSize: 12),
+                            ),
+                          ],
+                        ),
+                      );
+                    },
+                  );
+                } else if (snapshot.hasError) {
+                  return Text('${snapshot.error}');
+                }
+                return const CircularProgressIndicator();
+              }),
         )
       ],
     );

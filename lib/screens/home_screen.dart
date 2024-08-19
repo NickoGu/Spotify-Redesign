@@ -32,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   late final List<Widget> _pages = [
     HomeWidget(songs: songs),
-    const PlaylistWidget(),
+    PlaylistWidget(songs: songs),
     const HistoryWidget(),
     const ProfileWidget(),
   ];
