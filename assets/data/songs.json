@@ -2,106 +2,148 @@
     {
         "name": "De Música Ligera",
         "artist": "Soda Stereo",
-        "image": "https://i.scdn.co/image/ab67616d0000b2731bbe81fc1e928f05149e49ab"
+        "cover": "https://i.scdn.co/image/ab67616d0000b2731bbe81fc1e928f05149e49ab",
+        "bandImage": "https://i.scdn.co/image/ab6761610000e5eb4a6d2f5e161c011cdb9cef69",
+        "thisIsImage": "https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO4uy2je-default.jpg"
     },
     {
         "name": "Persiana Americana",
         "artist": "Soda Stereo",
-        "image": "https://i.scdn.co/image/ab67616d0000b2731bbe81fc1e928f05149e49ab"
+        "cover": "https://i.scdn.co/image/ab67616d0000b2731bbe81fc1e928f05149e49ab",
+        "bandImage": "https://i.scdn.co/image/ab6761610000e5eb4a6d2f5e161c011cdb9cef69",
+        "thisIsImage": "https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO4uy2je-default.jpg"
     },
     {
         "name": "Trátame Suavemente",
         "artist": "Soda Stereo",
-        "image": "https://i.scdn.co/image/ab67616d0000b2731bbe81fc1e928f05149e49ab"
+        "cover": "https://i.scdn.co/image/ab67616d0000b2731bbe81fc1e928f05149e49ab",
+        "bandImage": "https://i.scdn.co/image/ab6761610000e5eb4a6d2f5e161c011cdb9cef69",
+        "thisIsImage": "https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO4uy2je-default.jpg"
     },
     {
         "name": "Cuando Pase el Temblor",
         "artist": "Soda Stereo",
-        "image": "https://i.scdn.co/image/ab67616d0000b2731bbe81fc1e928f05149e49ab"
+        "cover": "https://i.scdn.co/image/ab67616d0000b2731bbe81fc1e928f05149e49ab",
+        "bandImage": "https://i.scdn.co/image/ab6761610000e5eb4a6d2f5e161c011cdb9cef69",
+        "thisIsImage": "https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO4uy2je-default.jpg"
     },
     {
         "name": "Loco (Tu Forma de Ser)",
         "artist": "Los Auténticos Decadentes",
-        "image": "https://i.scdn.co/image/ab67616d0000b27362d6b9c62691db6f63608eac"
+        "cover": "https://i.scdn.co/image/ab67616d0000b27362d6b9c62691db6f63608eac",
+        "bandImage": "https://i.scdn.co/image/ab6761610000e5eb39bb27c9cc186cb2479a48d6",
+        "thisIsImage": "https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO29zXIQ-default.jpg"
     },
     {
         "name": "11 y 6",
         "artist": "Fito Páez",
-        "image": "https://i.scdn.co/image/ab67616d0000b273921417baf700cc9da1d43b80"
+        "cover": "https://i.scdn.co/image/ab67616d0000b273921417baf700cc9da1d43b80",
+        "bandImage": "https://i.scdn.co/image/ab6761610000e5eb067ad0d35b4341420864762b",
+        "thisIsImage": "https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO0E2Rjy-default.jpg"
     },
     {
         "name": "El Amor Después del Amor",
         "artist": "Fito Páez",
-        "image": "https://i.scdn.co/image/ab67616d0000b273b80f37385bd537d17f9be93a"
+        "cover": "https://i.scdn.co/image/ab67616d0000b273b80f37385bd537d17f9be93a",
+        "bandImage": "https://i.scdn.co/image/ab6761610000e5eb067ad0d35b4341420864762b",
+        "thisIsImage": "https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO0E2Rjy-default.jpg"
     },
     {
         "name": "Sábado",
         "artist": "Divididos",
-        "image": "https://i.scdn.co/image/ab67616d0000b273abbe0ef276b8fd385d709aa7"
+        "cover": "https://i.scdn.co/image/ab67616d0000b273abbe0ef276b8fd385d709aa7",
+        "bandImage": "https://i.scdn.co/image/ab6761610000e5eba96c81176c455e3b8c9ca0f8",
+        "thisIsImage": "https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO48uy5O-default.jpg"
     },
     {
         "name": "Deja Vu",
         "artist": "Gustavo Cerati",
-        "image": "https://i.scdn.co/image/ab67616d0000b27314653b83cd7d851accdb5142"
+        "cover": "https://i.scdn.co/image/ab67616d0000b27314653b83cd7d851accdb5142",
+        "bandImage": "https://i.scdn.co/image/ab6761610000e5ebee0456d8afc4c63dff458587",
+        "thisIsImage": "https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO12BIac-default.jpg"
     },
     {
         "name": "Mil Horas",
         "artist": "Los Abuelos de la Nada",
-        "image": "https://i.scdn.co/image/ab67616d0000b273ac8e4606429b148f6d2ba11d"
+        "cover": "https://i.scdn.co/image/ab67616d0000b273ac8e4606429b148f6d2ba11d",
+        "bandImage": "https://i.scdn.co/image/ab6761610000e5eb8f1b0552958857772686f221",
+        "thisIsImage": "https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO3rYQjD-default.jpg"
     },
     {
         "name": "Tira para Arriba",
         "artist": "Miguel Mateos",
-        "image": "https://i.scdn.co/image/ab67616d0000b273996da394020f1d1ec6cb7ece"
+        "cover": "https://i.scdn.co/image/ab67616d0000b273996da394020f1d1ec6cb7ece",
+        "bandImage": "https://i.scdn.co/image/ab67616100005174020f9488564bc9a86952cb94",
+        "thisIsImage": "https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evNZXcxBL-default.jpg"
     },
     {
         "name": "Héroe del Whisky",
         "artist": "Patricio Rey y sus Redonditos de Ricota",
-        "image": "https://i.scdn.co/image/ab67616d0000b273eb35b5a4084fb41414b60d5b"
+        "cover": "https://i.scdn.co/image/ab67616d0000b273eb35b5a4084fb41414b60d5b",
+        "bandImage": "https://i.scdn.co/image/ab6761610000517478f40b5153bfcbd5e7a55432",
+        "thisIsImage": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da841b586357eae776a5e958d38b"
     },
     {
         "name": "El final es en donde partí",
         "artist": "La Renga",
-        "image": "https://i.scdn.co/image/ab67616d0000b27368db2fb5a6164dbbd89083d9"
+        "cover": "https://i.scdn.co/image/ab67616d0000b27368db2fb5a6164dbbd89083d9",
+        "bandImage": "https://i.scdn.co/image/ab6761610000e5eb93e157c63e523335a4d6d21a",
+        "thisIsImage": "https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO1JAQaQ-default.jpg"
     },
     {
         "name": "Seguir Viviendo Sin Tu Amor",
         "artist": "Luis Alberto Spinetta",
-        "image": "https://i.scdn.co/image/ab67616d0000b273217ce66ac32c161c7516228c"
+        "cover": "https://i.scdn.co/image/ab67616d0000b273217ce66ac32c161c7516228c",
+        "bandImage": "https://i.scdn.co/image/ab6761610000e5ebe1988a1a730ae50728967a16",
+        "thisIsImage": "https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO100Avz-default.jpg"
     },
     {
         "name": "Por mil noches",
         "artist": "Airbag",
-        "image": "https://i.scdn.co/image/ab67616d0000b27398f2e41c3e293608d75b5191"
+        "cover": "https://i.scdn.co/image/ab67616d0000b27398f2e41c3e293608d75b5191",
+        "bandImage": "https://i.scdn.co/image/ab6761610000e5eb7e7ce771bde5235afd45cb43",
+        "thisIsImage": "https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO0QxfCe-default.jpg"
     },
     {
         "name": "Té para Tres",
         "artist": "Soda Stereo",
-        "image": "https://i.scdn.co/image/ab67616d0000b273e885d6895a32a612813bf6d3"
+        "cover": "https://i.scdn.co/image/ab67616d0000b273e885d6895a32a612813bf6d3",
+        "bandImage": "https://i.scdn.co/image/ab6761610000e5eb4a6d2f5e161c011cdb9cef69",
+        "thisIsImage": "https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO4uy2je-default.jpg"
     },
     {
         "name": "Pupilas Lejanas",
         "artist": "Los Pericos",
-        "image": "https://i.scdn.co/image/ab67616d0000b273544db3cf4833b199f258c9e1"
+        "cover": "https://i.scdn.co/image/ab67616d0000b273544db3cf4833b199f258c9e1",
+        "bandImage": "https://i.scdn.co/image/ab67616d00001e02d9119f4cbf8a069d797f45aa",
+        "thisIsImage": "https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO4xziCc-default.jpg"
     },
     {
         "name": "Spaguetti del Rock",
         "artist": "Divididos",
-        "image": "https://i.scdn.co/image/ab67616d0000b2738875cc2685c8d483e0e667f0"
+        "cover": "https://i.scdn.co/image/ab67616d0000b2738875cc2685c8d483e0e667f0",
+        "bandImage": "https://i.scdn.co/image/ab6761610000e5eba96c81176c455e3b8c9ca0f8",
+        "thisIsImage": "https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO48uy5O-default.jpg"
     },
     {
         "name": "Mi perro dinamita",
         "artist": "Los Redondos",
-        "image": "https://i.scdn.co/image/ab67616d0000b2736b26c788ddc971ca6176a650"
+        "cover": "https://i.scdn.co/image/ab67616d0000b2736b26c788ddc971ca6176a650",
+        "bandImage": "https://i.scdn.co/image/ab6761610000517478f40b5153bfcbd5e7a55432",
+        "thisIsImage": "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da841b586357eae776a5e958d38b"
     },
     {
         "name": "Rock del gato",
         "artist": "Los Ratones Paranoicos",
-        "image": "https://i.scdn.co/image/ab67616d0000b2737d032e1ed6d0bc6ed155cc27"
+        "cover": "https://i.scdn.co/image/ab67616d0000b2737d032e1ed6d0bc6ed155cc27",
+        "bandImage": "https://i.scdn.co/image/ab6761610000517498408436bfcefbe473b889c2",
+        "thisIsImage": "https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO35DuJ3-default.jpg"
     },
     {
         "name": "Lamento Boliviano",
         "artist": "Los Enanitos Verdes",
-        "image": "https://i.scdn.co/image/ab67616d0000b27335bf8a2179962114b8ec7585"
+        "cover": "https://i.scdn.co/image/ab67616d0000b27335bf8a2179962114b8ec7585",
+        "bandImage": "https://i.scdn.co/image/1c47795e21794ab947aa466283026148163d4bf5",
+        "thisIsImage": "https://thisis-images.spotifycdn.com/37i9dQZF1DZ06evO2ShMI0-default.jpg"
     }
 ]

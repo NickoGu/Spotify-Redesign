@@ -228,7 +228,7 @@ class HomeWidget extends StatelessWidget {
                                       width: 120,
                                       height: 120,
                                       child: Image.network(
-                                          snapshot.data![index].image),
+                                          snapshot.data![index].cover),
                                     ),
                                   ),
                                   const SizedBox(height: 8),
@@ -272,7 +272,7 @@ class HomeWidget extends StatelessWidget {
               Text('Genres'),
             ],
             views: [
-              const ArtistsWidget(),
+              ArtistsWidget(songs: songs),
               const AlbumsWidget(),
               const PodcastsWidget(),
               SizedBox(
@@ -366,28 +366,55 @@ class AlbumsWidget extends StatelessWidget {
 }
 
 class ArtistsWidget extends StatelessWidget {
-  const ArtistsWidget({
+  ArtistsWidget({
     super.key,
+    required this.songs,
   });
+
+  Future<List<Songs>> songs;
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-        itemCount: 10,
-        itemBuilder: (context, snapshot) {
-          return SizedBox(
-              width: double.infinity,
-              child: ListTile(
-                leading: const CircleAvatar(),
-                title:
-                    const Text('Charly García', style: TextStyle(fontSize: 16)),
-                subtitle: const Text('2.6M monthly listeners',
-                    style: TextStyle(fontSize: 10)),
-                trailing: IconButton(
-                  icon: const Icon(Icons.chevron_right),
-                  onPressed: () {},
-                ),
-              ));
-        });
+    return SizedBox(
+      width: double.infinity,
+      child: FutureBuilder<List<Songs>>(
+        future: songs,
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            List<Songs> uniqueArtists = [];
+            for (var song in snapshot.data!) {
+              if (!uniqueArtists
+                  .any((element) => element.artist == song.artist)) {
+                uniqueArtists.add(song);
+              }
+            }
+            return ListView.builder(
+                itemCount: uniqueArtists.length,
+                itemBuilder: (context, index) {
+                  return SizedBox(
+                      width: double.infinity,
+                      child: ListTile(
+                        leading: CircleAvatar(
+                            backgroundImage:
+                                NetworkImage(uniqueArtists[index].bandImage)),
+                        title: Text(uniqueArtists[index].artist,
+                            style: const TextStyle(
+                                fontSize: 16, overflow: TextOverflow.ellipsis),
+                            maxLines: 1),
+                        subtitle: const Text('2.6M monthly listeners',
+                            style: TextStyle(fontSize: 10)),
+                        trailing: IconButton(
+                          icon: const Icon(Icons.chevron_right),
+                          onPressed: () {},
+                        ),
+                      ));
+                });
+          } else if (snapshot.hasError) {
+            return Text('${snapshot.error}');
+          }
+          return const CircularProgressIndicator();
+        },
+      ),
+    );
   }
 }
