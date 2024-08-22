@@ -2,6 +2,7 @@ import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:spotify_redesign/models/songs_model.dart';
+import 'package:spotify_redesign/screens/song_screen.dart';
 
 class ProfileWidget extends StatelessWidget {
   const ProfileWidget({
@@ -253,36 +254,48 @@ class HomeWidget extends StatelessWidget {
                         itemBuilder: (context, index) {
                           return Padding(
                             padding: const EdgeInsets.only(right: 12.0),
-                            child: SizedBox(
-                              width: 120,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  ClipRRect(
-                                    borderRadius: BorderRadius.circular(12),
-                                    child: SizedBox(
-                                      width: 120,
-                                      height: 120,
-                                      child: Image.network(
-                                          snapshot.data![index].cover),
+                            child: GestureDetector(
+                              onTap: () => Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => SongScreen(
+                                    songName: snapshot.data![index].name,
+                                    artistName: snapshot.data![index].artist,
+                                    cover: snapshot.data![index].cover,
+                                  ),
+                                ),
+                              ),
+                              child: SizedBox(
+                                width: 120,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    ClipRRect(
+                                      borderRadius: BorderRadius.circular(12),
+                                      child: SizedBox(
+                                        width: 120,
+                                        height: 120,
+                                        child: Image.network(
+                                            snapshot.data![index].cover),
+                                      ),
                                     ),
-                                  ),
-                                  const SizedBox(height: 8),
-                                  Text(
-                                    snapshot.data![index].name,
-                                    style: const TextStyle(fontSize: 14),
-                                    maxLines: 2,
-                                    overflow: TextOverflow.ellipsis,
-                                  ),
-                                  Text(
-                                    snapshot.data![index].artist,
-                                    style: const TextStyle(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w200),
-                                    maxLines: 1,
-                                    overflow: TextOverflow.ellipsis,
-                                  ),
-                                ],
+                                    const SizedBox(height: 8),
+                                    Text(
+                                      snapshot.data![index].name,
+                                      style: const TextStyle(fontSize: 14),
+                                      maxLines: 2,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                    Text(
+                                      snapshot.data![index].artist,
+                                      style: const TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w200),
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           );
